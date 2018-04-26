@@ -6,14 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js"></script>
+    <script src="//at.alicdn.com/t/font_642427_2x57ipbsmea5rk9.js"></script>
     <title>我的画板</title>
 </head>
 <body>
     <canvas id="canvas"width=300 height=300>
     </canvas>
     <div id="actions" class="actions">
-        <button id="eraser">橡皮檫</button>
-        <button id="brush">画笔</button>
+        <svg class="icon active" aria-hidden="true" id="brush">
+            <use xlink:href="#icon-pen"></use>
+            </svg>
+        <svg class="icon" aria-hidden="true"  id="eraser">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true"  id="clear">
+            <use xlink:href="#icon-delete"></use>
+         </svg>
+         <svg class="icon" aria-hidden="true"  id="save">
+            <use xlink:href="#icon-download"></use>
+        </svg>
     </div>
+    <ul class="colors">
+        <li id="black"  class="black active"></li> 
+        <li id="pink"  class="pink"></li> 
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>      
+    </ul>
+    <ul class="size">
+        <li id="thin" class="thin"></li>
+        <li id="thick" class="thick"></li>
+    </ul>
 </body>
-</html>
+<green

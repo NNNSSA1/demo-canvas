@@ -3,23 +3,86 @@
     margin: 0;
     padding: 0;
 }
+ul{
+    list-style: none;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
 #canvas{
-    background: gray;
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .actions{
     position: fixed;
-    bottom: 0;
-    left: 0;
+    top: 20px;
+    left: 20px;
+
 }
 
-.actions>#brush{
-    display: none;
+.actions>svg{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 10px;
+    transition: 0.3s;
 }
-.actions.x >#brush{
-    display: inline-block
+
+.actions>svg.active{
+    fill: red;
+    transform: scale(1.2)  /* 字体变大 */
 }
-.actions.x >    #eraser{
-    display: none;
+.colors{
+    position: fixed;
+    top: 50px;
+    left: 20px;
+}
+.colors>li{
+    margin: 10px 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.colors>li.green{
+    background: green;
+}
+.colors>li.blue{
+    background: blue;
+}
+.colors>li.pink{
+    background:pink;
+}
+.colors>li.black{
+    background:black;
+}
+.colors>li.active{
+    width: 25px;
+    height: 25px;
+    border-radius: green
+}
+.size{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 0 20px;
+}
+.size>li{
+    margin: 15px 0;
+    width: 20px;
+    height: 0;
+}
+.size>.thin{
+    border: 2px solid black;
+}
+.size>.thick{
+    border: 5px solid black;
+}
+.size>li>active{
+    width: 30px;
 }
