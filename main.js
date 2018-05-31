@@ -15,7 +15,9 @@ window.onload = function(){
     //1.动态设置画布全屏的大小
     autoSize(canvas)
 
-
+//阻止下拉
+    this.document.addEventListener('touchmove',preventBehavior,false)
+    
     //2.监听鼠标的动作
     listenToUser(canvas)
 
@@ -94,6 +96,9 @@ window.onload = function(){
 
 
 /********工具函数************/
+function preventBehavior(e){
+    e.preventDefault()
+}
 
 function autoSize(canvas){          //设置参数，下面的函数中只需要一个canvas
     setCanvasSize()
